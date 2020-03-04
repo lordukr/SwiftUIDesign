@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import Alamofire
 
 enum UsersApiRouter: APIConfiguration {
     case users(count: Int, page: Int)

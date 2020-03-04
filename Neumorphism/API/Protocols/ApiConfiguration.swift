@@ -7,11 +7,6 @@
 //
 
 import Foundation
-//import Alamofire
-//
-//extension ApiError: Error {
-//    static let parameterEncodingFailed(reason: )
-//}
 
 enum HTTPMethod: String {
     case get = "GET"

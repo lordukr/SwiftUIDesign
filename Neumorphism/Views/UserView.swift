@@ -23,7 +23,7 @@ struct UserView: View {
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.gray.opacity(30), lineWidth: 1))
                 
-            VStack {
+            VStack(alignment: .leading) {
                 Text("\(user.userFullName.fullName)")
                 Text("\(user.phoneNumber)")
             }
@@ -33,6 +33,6 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(user: User(id: UUID(), userFullName: UserFullName(firstName: "Boo", lastName: "Poo"), phoneNumber: "1233423", userPhotoURL: UserAvatar(with: nil, thumb: nil), userEmail: "dfasfj@fsdlsdf"))
+        UserView(user: User(id: UUID(), userFullName: UserFullName(firstName: "Boo", lastName: "Poo"), phoneNumber: "1233423", userPhotoURL: UserAvatar(with: nil, thumb: "https://randomuser.me/api/portraits/thumb/men/80.jpg"), userEmail: "dfasfj@fsdlsdf"))
     }
 }

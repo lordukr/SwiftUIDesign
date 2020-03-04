@@ -17,7 +17,6 @@ struct URLImage: View {
     init(url: String, placeholder: Image = Image("placeholder")) {
         self.urlString = url
         self.placeholder = placeholder
-//        self.imageLoader.load(url: url)
     }
     
     var body: some View {
