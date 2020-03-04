@@ -16,12 +16,18 @@ struct MainView: View {
     }
     
     var body: some View {
-        VStack {
-            Text("List")
-            List(usersModel.users) { user in
-                UserView(user: user)
+        NavigationView {
+            VStack {
+                List(usersModel.users) { user in
+                    NavigationLink(destination: DetailView(user: user)) {
+                        UserView(user: user)
+                    }
+                }
             }
-        }.edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+            .navigationBarTitle(Text("Title"))
+        }
+            
+        .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
     }
 }
 
